@@ -13,13 +13,15 @@ function setup() {
 }
 
 function draw() {
-    background(200);
-
-    let spectrum = fft.analyze();
-
-    beginShape();
-    for (i = 0; i < spectrum.length; i++) {
-        vertex(i, map(spectrum[i], 0, 255, height, 0));
-    }
-    endShape();
+    try {
+        background(200);
+    
+        let spectrum = fft.analyze();
+    
+        beginShape();
+        for (i = 0; i < spectrum.length; i++) {
+            vertex(i, map(spectrum[i], 0, 255, height, 0));
+        }
+        endShape();
+    } catch {}
 }
