@@ -1,7 +1,6 @@
 let mic;
 
 function setup() {
-    console.log(p5);
     createCanvas(710, 200);
 
     // Create an Audio input
@@ -10,6 +9,10 @@ function setup() {
     // start the Audio Input.
     // By default, it does not .connect() (to the computer speakers)
     mic.start();
+
+    setTimeout(() => {
+        getAudioContext().resume();
+    }, 1000)
 }
 
 function draw() {
