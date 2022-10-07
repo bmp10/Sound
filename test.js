@@ -10,8 +10,8 @@ function setup() {
     // By default, it does not .connect() (to the computer speakers)
     mic.start();
 
-    setTimeout(() => {
-        getAudioContext().resume();
+    setInterval(() => {
+        mic.resume();
     }, 1000)
 }
 
