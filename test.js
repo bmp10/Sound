@@ -26,6 +26,8 @@ function draw() {
             vertex(i, map(spectrum[i], 0, 255, height, 0));
         }
         endShape();
+        console.log(spectrum);
+        console.log(spectrum.length);
     } catch {
         console.log('error');
     }
