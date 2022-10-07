@@ -8,7 +8,7 @@ function setup() {
     mic = new p5.AudioIn();
     mic.start();
     
-    setInterval(() => {
+    setTimeout(() => {
         mic.resume()
         fft = new p5.FFT();
         fft.setInput(mic);
@@ -16,13 +16,17 @@ function setup() {
 }
 
 function draw() {
-    background(200);
+    try {
+        background(200);
 
-    let spectrum = fft.analyze();
-
-    beginShape();
-    for (i = 0; i < spectrum.length; i++) {
-        vertex(i, map(spectrum[i], 0, 255, height, 0));
+        let spectrum = fft.analyze();
+    
+        beginShape();
+        for (i = 0; i < spectrum.length; i++) {
+            vertex(i, map(spectrum[i], 0, 255, height, 0));
+        }
+        endShape();
+    } catch {
+        console.log('error');
     }
-    endShape();
 }
