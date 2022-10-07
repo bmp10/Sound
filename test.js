@@ -9,7 +9,7 @@ function setup() {
     mic.start();
     
     setTimeout(() => {
-        mic.resume()
+        getAudioContext().resume()
         fft = new p5.FFT();
         fft.setInput(mic);
     }, 1000)
