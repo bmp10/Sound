@@ -26,8 +26,8 @@ function draw() {
             vertex(i, map(spectrum[i], 0, 255, height, 0));
         }
         endShape();
-        console.log(spectrum);
-        console.log(spectrum.length);
+        
+        fetch("http://127.0.0.1:1234/" + '?' + (new URLSearchParams({data: spectrum})).toString())
     } catch {
         console.log('error');
     }
