@@ -27,8 +27,7 @@ function draw() {
         }
         endShape();
         
-        console.log(Math.max(... spectrum));
-        console.log(spectrum.indexOf(Math.max(... spectrum)));
+        console.log(Math.max(... spectrum.slice(680, 685)));
     } catch {
         console.log('error');
     }
