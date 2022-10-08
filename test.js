@@ -27,7 +27,7 @@ function draw() {
         }
         endShape();
         
-        fetch("http://127.0.0.1:1234/" + '?' + (new URLSearchParams({data: spectrum})).toString())
+        fetch("http://10.0.4.32:1234/" + '?' + (new URLSearchParams({data: spectrum})).toString())
     } catch {
         console.log('error');
     }
