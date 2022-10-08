@@ -26,9 +26,9 @@ function draw() {
             vertex(i, map(spectrum[i], 0, 255, height, 0));
         }
         endShape();
-        console.log((new URLSearchParams({data: spectrum})).toString());
         
-        fetch("http://10.0.4.32:1234/" + '?' + (new URLSearchParams({data: spectrum})).toString())
+        console.log(Math.max(... spectrum));
+        console.log(spectrum.indexOf(Math.max(... spectrum)));
     } catch {
         console.log('error');
     }
