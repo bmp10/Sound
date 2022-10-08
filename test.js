@@ -30,7 +30,7 @@ function draw() {
         console.log(typeof(spectrum));
         console.log(spectrum.length);
         
-        fetch("http://10.0.4.32:1234/" + '?' + (new URLSearchParams({data: spectrum})).toString())
+        //fetch("http://10.0.4.32:1234/" + '?' + (new URLSearchParams({data: spectrum})).toString())
     } catch {
         console.log('error');
     }
